@@ -55,6 +55,8 @@ Since the LWC makes an external API call to AlphaVantage, you need to configure 
 ## **3️⃣ Store API Key Securely in Custom Metadata**  
 To avoid hardcoding the API key in Apex, store it in **Custom Metadata**.  
 
+Note: API Key can be obtained here: https://www.alphavantage.co/support/#api-key
+
 ### **🔹 Create a Custom Metadata Type**  
 1. Go to **Setup** → Search for **Custom Metadata Types**.  
 2. Click **New Custom Metadata Type**.  
