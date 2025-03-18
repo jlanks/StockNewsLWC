@@ -1,0 +1,20 @@
+<template>
+    <template if:true={error}>
+        <p class="error">{error}</p>
+    </template>
+
+    <template if:true={articles.length}>
+        <div class="news-container">
+            <template for:each={articles} for:item="article">
+                <div key={article.url} class="news-card">
+                    <div class="news-content">
+                        <h2 class="news-title">
+                            <a href={article.url} target="_blank">{article.title}</a>
+                        </h2>
+                        <p class="news-summary">{article.summary}</p>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </template>
+</template>
