@@ -1,7 +1,7 @@
 
 # **📘 Stock News LWC Setup Guide**  
 
-This guide walks you through the setup of the **Stock News LWC**, including retrieving the code, configuring named credentials, securing the API key, and adding the component to an Account record page.  
+This guide walks you through the setup of the **Stock News LWC**, including retrieving the code, configuring named credentials, securing the API key, and adding the component to an Account record page. It also explains how to use the component to fetch stock-related news.  
 
 ---
 
@@ -103,11 +103,24 @@ sfdx force:source:push
 
 ---
 
-## **6️⃣ Test the LWC**  
-1. Open any **Account Record Page** where the LWC was added.  
-2. Enter a **Stock Ticker Symbol** (e.g., `AAPL`).  
-3. Click **Search**.  
-4. If everything is configured correctly, you should see **stock-related news articles** displayed.  
+## **6️⃣ How to Use the LWC**  
+Once the **Stock News LWC** is deployed and added to the **Account record page**, you can start using it.  
+
+### **🔹 Steps to Fetch Stock News**  
+1. Navigate to an **Account Record Page** where the component is placed.  
+2. Ensure the **Ticker Symbol** field (standard field on the Account object) is populated with a valid stock ticker (e.g., `AAPL` for Apple, `TSLA` for Tesla).  
+3. The LWC will automatically fetch and display relevant stock-related news articles.  
+
+### **🔹 What Happens If There's No Ticker?**  
+- If the **Ticker Symbol** field is empty, the component will not show any news.  
+- Ensure the ticker is a valid **publicly traded stock symbol**.  
+
+---
+
+## **7️⃣ Test the LWC**  
+1. Open an **Account Record Page**.  
+2. Enter a **Stock Ticker Symbol** in the standard **Ticker Symbol** field.  
+3. Check if **news articles** appear in the component.  
 
 ---
 
@@ -115,6 +128,7 @@ sfdx force:source:push
 ### **⚠️ No Data Showing in LWC?**  
 - Make sure the **API Key** is correctly stored in **Custom Metadata**.  
 - Check the **Named Credential** setup in **Setup > Named Credentials**.  
+- Ensure the **Ticker Symbol** field is filled with a valid stock ticker.  
 
 ### **⚠️ Apex Callout Exception?**  
 - Go to **Setup > Debug Logs** to check for API call failures.  
