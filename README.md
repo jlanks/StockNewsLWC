@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # **📘 Stock News LWC Setup Guide**  
 
 This guide walks you through the setup of the **Stock News LWC**, including retrieving the code, configuring named credentials, securing the API key, and adding the component to an Account record page.  
